@@ -8,5 +8,5 @@ public:
 	void draw();
 	void keyPressed(int key);
 	
-	int keyStore;
+	std::string keyStore;
 };

@@ -1,10 +1,9 @@
 #include "ofApp.h"
 
 void ofApp::setup(){
-#ifdef TARGET_RASPBERRY_PI
-	ofSetFullscreen(true);
-#endif
-	keyStore = 0;
+	ofBackground(0);
+	keyStore = "";
+	ofHideCursor();
 }
 
 void ofApp::draw(){
@@ -12,6 +11,7 @@ void ofApp::draw(){
 }
 
 void ofApp::keyPressed(int key){
-	std::cout << "Key pressed: "  << key << std::endl;
-	keyStore = key;
+	std::string str(1, key);
+	std::cout << "Key pressed: " << str << std::endl;
+	keyStore = str;
 }
